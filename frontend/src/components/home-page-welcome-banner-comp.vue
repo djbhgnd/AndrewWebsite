@@ -1,6 +1,8 @@
 <template>
-    <div>
-        
+    <div id = "homePageWelcomeBanner">
+        <h1>
+            Welcome to my Website
+        </h1>
     </div>
 </template>
 
@@ -25,5 +27,9 @@ export default {
 </script>
 
 <style>
-
+    #homePageWelcomeBanner{
+        display:flex;
+        justify-content: center;
+        margin-top:30px;
+    }
 </style>

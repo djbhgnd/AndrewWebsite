@@ -37,36 +37,33 @@ export default {
 #homeView{
   display:flex;
   flex-wrap:wrap;
-  background-color:rgb(124, 124, 124);
-  height:100vh;
-  width:99vw;
+  height:100%;
+  width:100%;
 }
 #homeView #homeWelcomeBannerContainer{
-  border-width: 5px;
-  border: solid red;
   width:100%;
-  height:15vh;
 }
 #homeView #homeMainGridContainer{
   display:grid;
   grid-template-areas:  'infobox picture'
                         'additionalInfobox additionalInfobox';
+  grid-template-columns: 1fr 1fr;
   width:100%;
-  height:80vh;
+  height:100%;
+  margin:30px;
 }
 #homeView #homeMainGridContainer #homeInfoboxContainer{
   grid-area: infobox;
-  border-width: 5px;
-  border: solid red;
+  height:100%;
+  margin-right:30px;
 }
 #homeView #homeMainGridContainer #homeAdditionalInfoboxContainer{
   grid-area: additionalInfobox;
-  border-width: 5px;
-  border:solid red;
+  height:100%;
+  margin-top: 30px;
 }
 #homeView #homeMainGridContainer #homePictureContainer{
   grid-area: picture;
-  border-width: 5px;
-  border: solid red;
+  height:100%;
 }
 </style>
