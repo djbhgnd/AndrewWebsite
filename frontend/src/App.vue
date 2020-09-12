@@ -51,15 +51,12 @@ p{
   border-bottom:solid rgb(70, 70, 70) 2px;
 }
 #homeNavDiv{
-  border-top: solid rgb(70, 70, 70) 2px;
-  border-left: solid rgb(70, 70, 70) 2px;
-  border-right: solid rgb(70, 70, 70) 2px;
+  border-bottom: solid rgb(70, 70, 70) 2px;
   width:300px;
   display:flex;
   height:100%;
   align-items: center;
   justify-content: center;
-  background-color:rgb(124, 124, 124);
 }
 #resumeNavDiv{
   border-bottom: solid rgb(70, 70, 70) 2px;
