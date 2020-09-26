@@ -1,18 +1,20 @@
 <template>
-  <div id = 'homeView'>
-    <div id = 'homeWelcomeBannerContainer'>
-      <homePageWelcomeBannerComp/>
-    </div>
-    <div id = 'homeMainGridContainer'>
-      <div id = 'homeInfoboxContainer'>
-        <homePageInfoboxComp/>
+  <div id = 'homeViewView' class='view'>
+    <div id = 'homeView'>
+      <div id = 'homeWelcomeBannerContainer'>
+        <homePageWelcomeBannerComp/>
       </div>
-      <div id = 'homePictureContainer'>
-        <homePagePictureOfMeComp/>
+      <div id = 'homeMainGridContainer'>
+        <div id = 'homeInfoboxContainer'>
+          <homePageInfoboxComp/>
+        </div>
+        <div id = 'homePictureContainer'>
+          <homePagePictureOfMeComp/>
+        </div>
+        <div id = 'homeAdditionalInfoboxContainer'>
+          <homePageAdditionalInfoboxComp/>
+        </div>  
       </div>
-      <div id = 'homeAdditionalInfoboxContainer'>
-        <homePageAdditionalInfoboxComp/>
-      </div>  
     </div>
   </div>
 </template>
@@ -29,42 +31,23 @@ export default {
     homePageInfoboxComp,
     homePagePictureOfMeComp,
     homePageWelcomeBannerComp
-  },
-  created() {
-    document.getElementById('contactNavDiv').style.borderBottom = "solid rgb(70, 70, 70) 2px";
-    document.getElementById('resumeNavDiv').style.borderBottom = "solid rgb(70, 70, 70) 2px";
-    document.getElementById('projectsNavDiv').style.borderBottom = "solid rgb(70, 70, 70) 2px";
-    document.getElementById('homeNavDiv').style.borderBottom = "none";
-
-    document.getElementById('projectsNavDiv').style.borderLeft = "none";
-    document.getElementById('contactNavDiv').style.borderLeft = "none";
-    document.getElementById('resumeNavDiv').style.borderLeft = "none";
-    document.getElementById('homeNavDiv').style.borderLeft = "solid rgb(70, 70, 70) 2px";
-
-    document.getElementById('projectsNavDiv').style.borderRight = "none";
-    document.getElementById('contactNavDiv').style.borderRight = "none";
-    document.getElementById('resumeNavDiv').style.borderRight = "none";
-    document.getElementById('homeNavDiv').style.borderRight = "solid rgb(70, 70, 70) 2px";
-
-    document.getElementById('projectsNavDiv').style.borderTop = "none";
-    document.getElementById('contactNavDiv').style.borderTop = "none";
-    document.getElementById('resumeNavDiv').style.borderTop = "none";
-    document.getElementById('homeNavDiv').style.borderTop = "solid rgb(70, 70, 70) 2px";
-    
-    document.getElementById('homeNavDiv').style.backgroundColor = "rgb(124, 124, 124)";
-    document.getElementById('contactNavDiv').style.backgroundColor = "transparent";
-    document.getElementById('resumeNavDiv').style.backgroundColor = "transparent";
-    document.getElementById('projectsNavDiv').style.backgroundColor = "transparent";
   }
 }
 </script>
 
 <style>
+#homeViewView{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
 #homeView{
   display:flex;
   flex-wrap:wrap;
+  justify-content: center;
   height:100%;
-  width:100%;
+  width:75%;
+  padding-top: 8vh;
 }
 #homeView #homeWelcomeBannerContainer{
   width:100%;
@@ -73,23 +56,34 @@ export default {
   display:grid;
   grid-template-areas:  'infobox picture'
                         'additionalInfobox additionalInfobox';
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(70%,80%) minmax(20%,20%);
   width:100%;
   height:100%;
-  margin:30px;
+  margin:3vh;
 }
 #homeView #homeMainGridContainer #homeInfoboxContainer{
   grid-area: infobox;
   height:100%;
-  margin-right:30px;
+  margin-right:3vw;
 }
 #homeView #homeMainGridContainer #homeAdditionalInfoboxContainer{
   grid-area: additionalInfobox;
   height:100%;
-  margin-top: 30px;
+  margin-top: 3vh;
 }
 #homeView #homeMainGridContainer #homePictureContainer{
   grid-area: picture;
-  height:100%;
+}
+@media (max-aspect-ratio:28/19){
+  #homeView #homeMainGridContainer{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    height:100%;
+    margin:3vh;
+  }
+  #homePictureContainer{
+    display:none;
+  }
 }
 </style>

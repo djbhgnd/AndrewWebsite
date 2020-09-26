@@ -1,47 +1,47 @@
 <template>
-  <div>
-
+  <div class="wrapperBG">
+    <div id = 'contactView' class='view'>
+      <div id = 'phoneInfoContainer' class = 'contactViewSection'>
+        <contactPagePhoneBoxComp/>
+      </div>
+      <div id = 'emailInfoContainer' class = 'contactViewSection'>
+        <contactPageEmailBoxComp/>
+      </div>
+      <div id = 'linkedinInfoContainer' class = 'contactViewSection'>
+        <contactPageLinkedinBoxComp/>
+      </div>
+      <div id = 'githubInfoContainer' class = 'contactViewSection'>
+        <contactPageGithubBoxComp/>
+      </div>
+    </div>
+    <ul class="bg-bubbles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
   </div>
 </template>
 
 <script>
+import contactPagePhoneBoxComp from '../components/contact-page-phone-box-comp.vue'
+import contactPageEmailBoxComp from '../components/contact-page-email-box-comp.vue'
+import contactPageLinkedinBoxComp from '../components/contact-page-linkedin-box-comp.vue'
+import contactPageGithubBoxComp from '../components/contact-page-github-box-comp.vue'
+
 export default {
   name: 'contact',
-  data() {
-    return {
-
-    }
-  },
-  methods:{
-
-  },
-  created() { 
-    document.getElementById('homeNavDiv').style.borderBottom = "solid rgb(70, 70, 70) 2px";
-    document.getElementById('resumeNavDiv').style.borderBottom = "solid rgb(70, 70, 70) 2px";
-    document.getElementById('projectsNavDiv').style.borderBottom = "solid rgb(70, 70, 70) 2px";
-    document.getElementById('contactNavDiv').style.borderBottom = "none";
-
-    document.getElementById('projectsNavDiv').style.borderLeft = "none";
-    document.getElementById('homeNavDiv').style.borderLeft = "none";
-    document.getElementById('resumeNavDiv').style.borderLeft = "none";
-    document.getElementById('contactNavDiv').style.borderLeft = "solid rgb(70, 70, 70) 2px";
-
-    document.getElementById('projectsNavDiv').style.borderRight = "none";
-    document.getElementById('homeNavDiv').style.borderRight = "none";
-    document.getElementById('resumeNavDiv').style.borderRight = "none";
-    document.getElementById('contactNavDiv').style.borderRight = "solid rgb(70, 70, 70) 2px";
-
-    document.getElementById('projectsNavDiv').style.borderTop = "none";
-    document.getElementById('homeNavDiv').style.borderTop = "none";
-    document.getElementById('resumeNavDiv').style.borderTop = "none";
-    document.getElementById('contactNavDiv').style.borderTop = "solid rgb(70, 70, 70) 2px";
-
-    document.getElementById('contactNavDiv').style.backgroundColor = "rgb(124, 124, 124)";
-    document.getElementById('homeNavDiv').style.backgroundColor = "transparent";
-    document.getElementById('resumeNavDiv').style.backgroundColor = "transparent";
-    document.getElementById('projectsNavDiv').style.backgroundColor = "transparent";
-
-
+  components: {
+    contactPagePhoneBoxComp,
+    contactPageEmailBoxComp,
+    contactPageLinkedinBoxComp,
+    contactPageGithubBoxComp
   }
 };
 </script>

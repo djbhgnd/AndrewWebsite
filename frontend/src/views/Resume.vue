@@ -1,51 +1,24 @@
 <template>
-  <div>
-
+  <div id = 'resumeView' class='view'>
+    <resumePageResumeBoxComp/>
   </div>
 </template>
 
 <script>
+import resumePageResumeBoxComp from '../components/resume-page-resume-box-comp.vue'
 export default {
   name: 'resume',
-  data() {
-    return {
-
-    }
-  },
-  methods:{
-
-  },
-  created() { 
-    document.getElementById('homeNavDiv').style.borderBottom = "solid rgb(70, 70, 70) 2px";
-    document.getElementById('contactNavDiv').style.borderBottom = "solid rgb(70, 70, 70) 2px";
-    document.getElementById('projectsNavDiv').style.borderBottom = "solid rgb(70, 70, 70) 2px";
-    document.getElementById('resumeNavDiv').style.borderBottom = "none";
-
-    document.getElementById('homeNavDiv').style.borderLeft = "none";
-    document.getElementById('contactNavDiv').style.borderLeft = "none";
-    document.getElementById('projectsNavDiv').style.borderLeft = "none";
-    document.getElementById('resumeNavDiv').style.borderLeft = "solid rgb(70, 70, 70) 2px";
-
-    document.getElementById('homeNavDiv').style.borderRight = "none";
-    document.getElementById('contactNavDiv').style.borderRight = "none";
-    document.getElementById('projectsNavDiv').style.borderRight = "none";
-    document.getElementById('resumeNavDiv').style.borderRight = "solid rgb(70, 70, 70) 2px";
-
-    document.getElementById('homeNavDiv').style.borderTop = "none";
-    document.getElementById('contactNavDiv').style.borderTop = "none";
-    document.getElementById('projectsNavDiv').style.borderTop = "none";
-    document.getElementById('resumeNavDiv').style.borderTop = "solid rgb(70, 70, 70) 2px";
-
-    document.getElementById('resumeNavDiv').style.backgroundColor = "rgb(124, 124, 124)";
-    document.getElementById('homeNavDiv').style.backgroundColor = "transparent";
-    document.getElementById('contactNavDiv').style.backgroundColor = "transparent";
-    document.getElementById('projectsNavDiv').style.backgroundColor = "transparent";
-
-
+  components: {
+    resumePageResumeBoxComp
   }
-};
+}
 </script>
 
 <style>
-
+  #resumeView{
+    display:flex;
+    justify-content:center;
+    padding-top: 8vh;
+    width:100vw;
+  }
 </style>

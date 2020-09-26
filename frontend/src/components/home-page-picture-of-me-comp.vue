@@ -1,6 +1,6 @@
 <template>
     <div id = "homePagepictureOfMe">
-        <img src="../assets/squareheadshot.jpg" alt = "headshot" width="300vh" height="300vh" class="headshot"/>
+        <img src="../assets/squareheadshot.jpg" alt = "headshot" class="headshot"/>
     </div>
 </template>
 
@@ -13,10 +13,13 @@
         display:flex;
         justify-content: center;
         align-items: center;
-        height: 100%;
+        padding-bottom:5vh;
+        margin-top:2vh;
+        object-fit:contain;
     }
     .headshot{
         border-radius: 50%;
-        border: solid black 1px;
+        height:100%;
+        width:100%;
     }
 </style>

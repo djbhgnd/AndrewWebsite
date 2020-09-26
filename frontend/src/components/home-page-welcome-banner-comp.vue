@@ -7,29 +7,14 @@
 </template>
 
 <script>
-export default {
-    props: {
 
-    },
-    data() {
-        return{
-
-        }
-    },
-    created() {
-
-    },
-    methods: {
-
-    }
-
-}
 </script>
 
 <style>
     #homePageWelcomeBanner{
         display:flex;
+        align-items: center;
         justify-content: center;
-        margin-top:30px;
+        margin-top:3vh;
     }
 </style>
